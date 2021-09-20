@@ -61,7 +61,7 @@ resource "aws_launch_configuration" "webserver_example" {
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p "${var.server_port}" &
               EOF
-
+key_name = "my-key-pair"
   lifecycle {
     create_before_destroy = true
   }
